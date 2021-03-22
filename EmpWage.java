@@ -9,20 +9,27 @@ public class EmpWage {
         double empwage;
         double empCheck=Math.floor(Math.random() * 10) %3;
 
-        if	(empCheck == isfullTime)
-                {
-                empwage=fullTimeemployeeHr*employeeRateperHr;
-                System.out.println("fullTimeEmpwage:" +empwage); 
-		}
-        else if     (empCheck == ispartTime)
+	switch ((int) empCheck)
 		{
-                empwage=partTimeemployeeHr*employeeRateperHr;
-                System.out.println("partTimeEmpwage:" +empwage );
-		}
-        else
-                {
-                System.out.println("Employee is absent" );
-                }
-        }
-}
+        case 1:
+		if 
+		(empCheck == isfullTime){
+                empwage=fullTimeemployeeHr*employeeRateperHr;
+                System.out.println( "fullTimeEmpwage:" +empwage );}
 
+	break;
+
+        case 2:
+		if
+		(empCheck == ispartTime){
+                empwage=partTimeemployeeHr*employeeRateperHr;
+                System.out.println( "partTimeEmpwage:" +empwage );}
+
+	break;
+
+        default:
+		{
+                System.out.println("Employee is absent");}
+		}
+	}
+}
