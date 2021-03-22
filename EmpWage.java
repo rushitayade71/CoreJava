@@ -1,16 +1,22 @@
-public class EmpWage 
-	{
-	public static void main(String[] args) 
-		{
-		int isfullTime = 1;
-		double empCheck = Math.floor(Math.random() * 10) % 2;
+public class EmpWage {
+
+	public static void main(String[] args) {
+	double isfullTime=1;
+	double employeeRateperHr=20;
+	double employeeHr=8;
+	double Dailyemployeewage;
+	double empwage;
+	double empCheck=Math.floor(Math.random() * 10) %2;
+
 	if (empCheck == isfullTime)
-			{
-			System.out.println("Employee is present");
-			}
+		{
+        	empwage=employeeHr*employeeRateperHr;
+                System.out.println("Dailyemployeewage:" +empwage);
+		}
 	else
-			{
-			System.out.println("Employee is absent");
-			}
+		{
+                  System.out.println("Dailyemployeewage:" +0);
+		}
+        }
 }
-	}
+
