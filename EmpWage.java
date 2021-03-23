@@ -1,35 +1,37 @@
 public class EmpWage {
 
-        public static void main(String[] args) {
-        double isfullTime=1;
-        double ispartTime=2;
-        double employeeRateperHr=20;
-        double fullTimeemployeeHr=8;
-        double partTimeemployeeHr=4;
-        double empwage;
-        double empCheck=Math.floor(Math.random() * 10) %3;
+        public static final int isfullTime = 1;
+        public static final int ispartTime = 2;
+        public static final int employeeRateperHr = 20;
+        public static final int NumWorkingDays = 2;
 
-	switch ((int) empCheck)
-		{
-        case 1:
-		if 
-		(empCheck == isfullTime){
-                empwage=fullTimeemployeeHr*employeeRateperHr;
-                System.out.println( "fullTimeEmpwage:" +empwage );}
+	public static void main(String[] args) {
 
-	break;
+	int EmpHr=0; 
+	int totalEmpWage=0; 
 
-        case 2:
-		if
-		(empCheck == ispartTime){
-                empwage=partTimeemployeeHr*employeeRateperHr;
-                System.out.println( "partTimeEmpwage:" +empwage );}
+        for (int totalworkinDays = 0; totalworkinDays < NumWorkingDays; totalworkinDays++)
+                      {
 
-	break;
+        	double empCheck=Math.floor(Math.random() *10) %3;
+                switch ((int) empCheck)
+                        {
+                case isfullTime:
+                        EmpHr=8;
+                break;
 
-        default:
-		{
-                System.out.println("Employee is absent");}
-		}
-	}
+                case ispartTime:
+                        EmpHr=4;
+                break;
+
+                default:
+                        EmpHr=0;
+                        }
+                int EmpWage=(EmpHr*employeeRateperHr);
+		totalEmpWage += EmpWage;
+                System.out.println("Total Salary:" +EmpWage);
+			}
+	System.out.println("Total Employee Wage:" +totalEmpWage);
+        }
+
 }
