@@ -57,6 +57,15 @@ public class LineComparison {
 		 if(line1 == line2)
 		 {
 			System.out.println("Line1 And Line2 are Equal");}
+
+		if(line1 > line2)
+		{
+			System.out.println("Line1 Is Greater Than Line2");}
+
+		if(line1 < line2)
+		{
+			System.out.println("Line1 Is Less Than Line2");}
+
 		}
 
 	}
